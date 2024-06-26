@@ -51,7 +51,7 @@ window.botbuilder.init({
     "lazySocket": true,
     "themeName": "galaxy",
     "botName": "Wheelhouse Buddy",
-    "avatarUrl": "https://i.imgur.com/Wo8X5N1.png",
+    "avatarUrl": "https://i.imgur.com/MFf8dyk.png",
     "website": "https://clevvur.com",
     "stylesheet": "https://webchat-styler-css.botpress.app/prod/code/a1dadc2f-b19f-4633-99a4-f5aecb4daacc/v84951/style.css",
     "frontendVersion": "v1",
