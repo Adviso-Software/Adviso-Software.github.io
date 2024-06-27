@@ -27,14 +27,6 @@
        // Create and inject the style element
             const style = document.createElement('style');
             style.innerHTML = `
-              html, body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-                background-color: aqua;
-              }
               #chatbot-container {
                 position: fixed;
                 right: 0;
@@ -171,14 +163,6 @@
           // Create and inject the style element
             const style = document.createElement('style');
             style.innerHTML = `
-              html, body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-                background-color: aqua;
-              }
               #chatbot-container {
                 position: fixed;
                 right: 0;
