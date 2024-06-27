@@ -53,7 +53,7 @@ window.botbuilder.init({
     "botName": "Wheelhouse Buddy",
     "avatarUrl": "https://i.imgur.com/MFf8dyk.png",
     "website": "https://clevvur.com",
-    "stylesheet": "https://webchat-styler-css.botpress.app/prod/code/a1dadc2f-b19f-4633-99a4-f5aecb4daacc/v1615/style.css",
+    "stylesheet": "https://webchat-styler-css.botpress.app/prod/code/a1dadc2f-b19f-4633-99a4-f5aecb4daacc/v67367/style.css",
     "frontendVersion": "v1",
     "enableConversationDeletion": true,
     "theme": "galaxy",
