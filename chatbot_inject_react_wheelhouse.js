@@ -60,6 +60,7 @@
                 border: none;
                 cursor: pointer;
                 display: flex; 
+                z-index:999;
               }
               #hide-chatbot-btn {
                 position: absolute;
