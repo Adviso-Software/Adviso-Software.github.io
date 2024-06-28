@@ -31,7 +31,7 @@
                 position: fixed;
                 right: 0;
                 bottom: 0;
-                width: 100vh; 
+                width: 100%; 
                 height:70vh;
                 margin-right: 10px;
                 margin-bottom: 10px;
@@ -49,7 +49,7 @@
                 height:100%;
                 border: none; 
                 background-color: transparent;
-                z-index:9999999999;
+                z-index:9999999999999;
               }
               #show-chatbot-btn {
                 position: fixed;
