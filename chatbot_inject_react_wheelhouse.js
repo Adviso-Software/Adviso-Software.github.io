@@ -79,7 +79,7 @@
                top: 12px;
                left: 18px;
                height: 60px;
-               width: 240px,
+               width: 300px,
                color: #ffffff;
                display: flex;
               }
