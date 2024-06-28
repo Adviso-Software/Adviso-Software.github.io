@@ -93,7 +93,7 @@
                  <img src="https://i.imgur.com/CYf5wdV.png" alt="Icon"  />
              </div>
               
-              <span style="bottom:70px; width: 200px; right:10px; background-color: rgba(0,0,0,1); opacity: 0.7; padding:7px; border-radius: 50px; border-bottom-right-radius: 0px; position: absolute;">
+              <span style="bottom:70px; width: 150px; right:10px; background-color: rgba(0,0,0,1); opacity: 0.7; padding:7px; border-radius: 50px; border-bottom-right-radius: 0px; position: absolute;">
                 Need help? Talk to me!
               </span>
             `;
@@ -226,7 +226,7 @@
             showChatbotBtn.id = 'show-chatbot-btn';
             showChatbotBtn.innerHTML = `
               <img src="https://i.imgur.com/CYf5wdV.png" alt="Icon" style="height: 128px; width: 128px; margin-right: -25px;" />
-              <span style="bottom:130px; width: 250px; right:10px; background-color: rgba(0,0,0,1); opacity: 0.7; padding:10px; border-radius: 50px; border-bottom-right-radius: 0px; position: absolute;">
+              <span style="bottom:130px; width: 200px; right:10px; background-color: rgba(0,0,0,1); opacity: 0.7; padding:10px; border-radius: 50px; border-bottom-right-radius: 0px; position: absolute;">
                 Need help? Talk to me!
               </span>
             `;
