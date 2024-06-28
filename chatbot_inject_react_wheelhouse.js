@@ -38,6 +38,7 @@
                 background-color: transparent;
                 display: none; /* Initially hidden */
                 border-radius: 0.5rem;
+                z-index:999;
                 box-shadow: 
                     0px 4px 6px rgba(0, 0, 0, 0.1), /* Bottom shadow */
                     -4px 0px 6px rgba(0, 0, 0, 0.1), /* Left shadow */
@@ -49,7 +50,6 @@
                 height:100%;
                 border: none; 
                 background-color: transparent;
-                z-index:9999999999999;
               }
               #show-chatbot-btn {
                 position: fixed;
