@@ -91,8 +91,8 @@
             const showChatbotBtn = document.createElement('button');
             showChatbotBtn.id = 'show-chatbot-btn';
             showChatbotBtn.innerHTML = `
-             <div style="height: 60px; width: 60px; margin-right: -25px;">
-                 <img src="https://i.imgur.com/CYf5wdV.png" alt="Icon" style="height: 60px; width: 90px; margin-right: 13px;" />
+             <div style="height: 60px; width: 60px;">
+                 <img src="https://i.imgur.com/CYf5wdV.png" alt="Icon" style="height: 60px; width: 60px; margin-right: 13px;" />
              </div>
               
               <span style="bottom:70px; width: 150px; right:10px; background-color: rgba(0,0,0,1); opacity: 0.7; padding:7px; border-radius: 50px; border-bottom-right-radius: 0px; position: absolute;">
