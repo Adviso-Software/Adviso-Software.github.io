@@ -216,6 +216,7 @@
                height: 60px;
                width: 350px,
                color: #ffffff;
+               display:flex;
               }
             `;
             document.head.appendChild(style);
