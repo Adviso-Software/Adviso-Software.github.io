@@ -37,6 +37,7 @@
                 margin-bottom: 10px;
                 background-color: transparent;
                 display: none; /* Initially hidden */
+                border-radius: 0.5rem;
                 box-shadow: 
                     0px 4px 6px rgba(0, 0, 0, 0.1), /* Bottom shadow */
                     -4px 0px 6px rgba(0, 0, 0, 0.1), /* Left shadow */
@@ -174,6 +175,7 @@
                 background-color: transparent;
                 z-index:99999;
                 display: none;
+                border-radius: 0.5rem;
                 box-shadow: 
                     0px 4px 6px rgba(0, 0, 0, 0.1), /* Bottom shadow */
                     -4px 0px 6px rgba(0, 0, 0, 0.1), /* Left shadow */
