@@ -173,6 +173,7 @@
                 margin-bottom: 10px;
                 background-color: transparent;
                 z-index:99999;
+                display: none;
                 box-shadow: 
                     0px 4px 6px rgba(0, 0, 0, 0.1), /* Bottom shadow */
                     -4px 0px 6px rgba(0, 0, 0, 0.1), /* Left shadow */
@@ -205,7 +206,7 @@
                 border-radius: 500px;
                 border-color: black;
                 border-width: 1px;
-                display: flex; /* Initially hidden */
+                display: none;
               }
               #new-chatbot-title{
                background-color: #000000;
@@ -215,7 +216,6 @@
                height: 60px;
                width: 350px,
                color: #ffffff;
-               display: none;
               }
             `;
             document.head.appendChild(style);
