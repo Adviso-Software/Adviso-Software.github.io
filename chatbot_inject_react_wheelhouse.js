@@ -244,7 +244,7 @@
                     </svg>
                 </button>
                 <div id="new-chatbot-title" >
-              <img src="https://i.imgur.com/CYf5wdV.png" alt="Round" style="width: 50px; height: 50px; background-color: white; border-radius: 500px; padding: 2px; margin-top: 8=4px; margin-right: 10px;" />
+              <img src="https://adviso-software.github.io/icon.jpg" alt="Round" style="width: 50px; height: 50px; background-color: white; border-radius: 500px; padding: 2px; margin-top: 4px; margin-right: 10px;" />
                 <div style="display: flex; flex-direction: column; padding-top: 10px;">
                   <span style="color:white">Wheelhouse Buddy</span>
                   <button style="text-align: left; margin-top: -5px; text-decoration: underline; background-color:rgba(0,0,0,0); padding:0px; color:white; border: none; box-shadow: none;" onclick="window.open('https://clevvur.com', '_blank')">Powered ⚡️by Clevvur.com</button>
