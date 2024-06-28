@@ -172,7 +172,6 @@
                 margin-right: 10px;
                 margin-bottom: 10px;
                 background-color: transparent;
-                display: none; /* Initially hidden */
                 z-index:99999;
                 box-shadow: 
                     0px 4px 6px rgba(0, 0, 0, 0.1), /* Bottom shadow */
@@ -194,7 +193,7 @@
                 color: white;
                 border: none;
                 cursor: pointer;
-                display: none; /* Initially hidden */
+                display: flex; 
               }
               #hide-chatbot-btn {
                 position: absolute;
@@ -206,7 +205,7 @@
                 border-radius: 500px;
                 border-color: black;
                 border-width: 1px;
-                display: none; /* Initially hidden */
+                display: flex; /* Initially hidden */
               }
               #new-chatbot-title{
                background-color: #000000;
@@ -216,7 +215,7 @@
                height: 60px;
                width: 350px,
                color: #ffffff;
-               display: flex;
+               display: none;
               }
             `;
             document.head.appendChild(style);
@@ -253,12 +252,7 @@
             `;
             document.body.appendChild(chatbotContainer);
           
-            // Show chatbot container after x seconds
-            setTimeout(function() {
-                document.getElementById('chatbot-container').style.display = 'flex';
-                document.getElementById('hide-chatbot-btn').style.display = 'flex';
-            }, 3000);
-            
+
           
             // Add event listeners
             document.getElementById('show-chatbot-btn').addEventListener('click', function() {
