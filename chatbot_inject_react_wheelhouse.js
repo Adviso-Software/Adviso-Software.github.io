@@ -302,7 +302,10 @@ if (window.addEventListener) {
         elements[i].attachEvent('DOMSubtreeModified', contentChanged);
     }
 }
-
+document.addEventListener('DOMContentLoaded', function() {
+    var elements = document.getElementsByClassName('1bk5mm5');
+    console.log(elements); // Check if elements are found
+});
 
          
             // Add event listeners
