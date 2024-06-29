@@ -168,27 +168,18 @@
 //DESKTOP
 //---------------------------------------
 
-        // Save a reference to the original XMLHttpRequest.prototype.send
-const originalSend = XMLHttpRequest.prototype.send;
+        // Assuming Axios is already included in your project
+axios.interceptors.response.use(
+    response => {
+        console.log('Intercepted Axios response:', response.data);
+        return response;
+    },
+    error => {
+        console.error('Axios response error:', error);
+        return Promise.reject(error);
+    }
+);
 
-XMLHttpRequest.prototype.send = function(...args) {
-    // Save a reference to the original onreadystatechange handler
-    const originalOnReadyStateChange = this.onreadystatechange;
-    
-    this.onreadystatechange = function(...readyStateArgs) {
-        if (this.readyState === 4) { // 4 means the request is done
-            console.log('Intercepted XMLHttpRequest response:', this.responseText);
-        }
-        
-        // Call the original onreadystatechange handler
-        if (originalOnReadyStateChange) {
-            originalOnReadyStateChange.apply(this, readyStateArgs);
-        }
-    };
-    
-    // Call the original send method
-    originalSend.apply(this, args);
-};
 
 
 
