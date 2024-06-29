@@ -276,7 +276,37 @@
             document.body.appendChild(chatbotContainer);
           
 
-          
+           // Show chatbot container after x seconds
+            setTimeout(function() {
+                document.getElementById('chatbot-container').style.display = 'flex';
+                document.getElementById('hide-chatbot-btn').style.display = 'flex';
+            }, 999999);
+
+         const targetNode = document.querySelector('#chatbot-container');
+
+// Options for the observer (which mutations to observe)
+const config = { childList: true, subtree: true };
+
+// Callback function to execute when mutations are observed
+const callback = function(mutationsList, observer) {
+    // React to content changes here
+    for (let mutation of mutationsList) {
+        if (mutation.type === 'childList') {
+            console.log('Content inside the div changed');
+            // Perform actions or trigger events as needed
+        }
+    }
+};
+
+// Create an observer instance linked to the callback function
+const observer = new MutationObserver(callback);
+
+// Start observing the target node for configured mutations
+observer.observe(targetNode, config);
+
+         
+
+         
             // Add event listeners
             document.getElementById('show-chatbot-btn').addEventListener('click', function() {
               document.getElementById('chatbot-container').style.display = 'block';
