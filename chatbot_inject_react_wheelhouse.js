@@ -165,7 +165,7 @@
                 right: 0;
                 bottom: 0;
                 width: 500px; 
-                height:85vh;
+                height:65vh;
                 margin-right: 10px;
                 margin-bottom: 10px;
                 background-color: transparent;
