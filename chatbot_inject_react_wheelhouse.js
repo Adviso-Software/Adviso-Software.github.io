@@ -282,7 +282,7 @@
                 document.getElementById('hide-chatbot-btn').style.display = 'flex';
             }, 999999);
 
-         const targetNode = document.querySelector('#chatbot-container');
+         const targetNode = document.querySelector('chatbot-container');
 
 // Options for the observer (which mutations to observe)
 const config = { childList: true, subtree: true };
