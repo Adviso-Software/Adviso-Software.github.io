@@ -284,29 +284,20 @@
 
 
 
-var elements = document.getElementsByClassName('1bk5mm5');
-console.log(elements)
-function contentChanged() {
-    // This function will run each time the content of any of the divs changes
-    console.log('Content changed');
-}
-
-if (window.addEventListener) {
-    // Normal browsers
-    for (var i = 0; i < elements.length; i++) {
-        elements[i].addEventListener('DOMSubtreeModified', contentChanged, false);
-    }
-} else if (window.attachEvent) {
-    // IE
-    for (var i = 0; i < elements.length; i++) {
-        elements[i].attachEvent('DOMSubtreeModified', contentChanged);
-    }
-}
-document.addEventListener('DOMContentLoaded', function() {
-    var elements = document.getElementsByClassName('1bk5mm5');
-    console.log(elements); // Check if elements are found
-});
-
+var targetNode = document.getElementById('chatbot-container'); 
+ console.log(targetNode
+// Create an observer instance 
+var observer = new MutationObserver(function(mutations) { 
+  mutations.forEach(function(mutation) { 
+    console.log('The contents of the div element have changed.'); 
+  }); 
+}); 
+ 
+// Configuration of the observer: 
+var config = { attributes: true, childList: true, characterData: true }; 
+ 
+// Pass in the target node, as well as the observer options 
+observer.observe(targetNode, config); 
          
             // Add event listeners
             document.getElementById('show-chatbot-btn').addEventListener('click', function() {
