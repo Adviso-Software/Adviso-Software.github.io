@@ -286,9 +286,14 @@
 
 
          var iframe = document.getElementById('chatbot-iframe');
-            var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+         console.log(iframe)
+         iframe.onload = function() {
+             console.log("loaded")
+              var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
             var elements = iframeDocument.getElementsByClassName('1bk5mm5');
          console.log(elements)
+         }
+           
 var targetNode = document.getElementById('chatbot-container'); 
  console.log(targetNode)
 // Create an observer instance 
