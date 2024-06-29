@@ -168,6 +168,28 @@
 //DESKTOP
 //---------------------------------------
 
+
+           const originalFetch = window.fetch;
+        
+          window.fetch = function(...args) {
+            return originalFetch.apply(this, args)
+              .then(response => {
+                response.clone().json().then(data => {
+                  const event = new CustomEvent('responseReceived', { detail: data });
+                  document.dispatchEvent(event);
+                });
+                return response;
+              });
+          };
+        })();
+        
+        document.addEventListener('responseReceived', event => {
+          console.log('Response received:', event.detail);
+          // Handle the response here
+        });
+
+
+
           // Create and inject the style element
             const style = document.createElement('style');
             style.innerHTML = `
