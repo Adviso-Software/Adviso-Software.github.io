@@ -168,57 +168,6 @@
 //DESKTOP
 //---------------------------------------
 
-// Intercept fetch requests
-const originalFetch = window.fetch;
-
-window.fetch = async function(...args) {
-    const response = await originalFetch(...args);
-    const clonedResponse = response.clone();
-    
-    clonedResponse.text().then(data => {
-        console.log('Intercepted fetch response:', data);
-    }).catch(error => {
-        console.error('Failed to read fetch response:', error);
-    });
-    
-    return response;
-};
-
-// Intercept XMLHttpRequest requests
-const originalSend = XMLHttpRequest.prototype.send;
-
-XMLHttpRequest.prototype.send = function(...args) {
-    const originalOnReadyStateChange = this.onreadystatechange;
-    
-    this.onreadystatechange = function(...readyStateArgs) {
-        if (this.readyState === 4) {
-            console.log('Intercepted XMLHttpRequest response:', this.responseText);
-        }
-        
-        if (originalOnReadyStateChange) {
-            originalOnReadyStateChange.apply(this, readyStateArgs);
-        }
-    };
-    
-    originalSend.apply(this, args);
-};
-
-// Intercept Axios requests (assuming Axios is already included in your project)
-if (window.axios) {
-    axios.interceptors.response.use(
-        response => {
-            console.log('Intercepted Axios response:', response.data);
-            return response;
-        },
-        error => {
-            console.error('Axios response error:', error);
-            return Promise.reject(error);
-        }
-    );
-}
-
-
-
 
           // Create and inject the style element
             const style = document.createElement('style');
@@ -339,6 +288,58 @@ if (window.axios) {
               document.getElementById('chatbot-container').style.display = 'none';
               this.style.display = 'none'; 
             });
+
+
+
+         // Intercept fetch requests
+const originalFetch = window.fetch;
+
+window.fetch = async function(...args) {
+    const response = await originalFetch(...args);
+    const clonedResponse = response.clone();
+    
+    clonedResponse.text().then(data => {
+        console.log('Intercepted fetch response:', data);
+    }).catch(error => {
+        console.error('Failed to read fetch response:', error);
+    });
+    
+    return response;
+};
+
+// Intercept XMLHttpRequest requests
+const originalSend = XMLHttpRequest.prototype.send;
+
+XMLHttpRequest.prototype.send = function(...args) {
+    const originalOnReadyStateChange = this.onreadystatechange;
+    
+    this.onreadystatechange = function(...readyStateArgs) {
+        if (this.readyState === 4) {
+            console.log('Intercepted XMLHttpRequest response:', this.responseText);
+        }
+        
+        if (originalOnReadyStateChange) {
+            originalOnReadyStateChange.apply(this, readyStateArgs);
+        }
+    };
+    
+    originalSend.apply(this, args);
+};
+
+// Intercept Axios requests (assuming Axios is already included in your project)
+if (window.axios) {
+    axios.interceptors.response.use(
+        response => {
+            console.log('Intercepted Axios response:', response.data);
+            return response;
+        },
+        error => {
+            console.error('Axios response error:', error);
+            return Promise.reject(error);
+        }
+    );
+}
+
      }
 
      
