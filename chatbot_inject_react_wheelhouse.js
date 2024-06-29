@@ -123,7 +123,7 @@
                 </button>
                 <div id="new-chatbot-title" >
                     <img src="https://adviso-software.github.io/icon.jpg" alt="Round" style="width: 30px; height: 30px; background-color: rgb(255,255,255); border-radius: 500px; padding: 2px; margin-top: 16px; margin-right: 10px;" />
-                    <div style="display: flex; flex-direction: column; padding-top: 20px;">
+                    <div style="display: flex; flex-direction: column; padding-top: 15px;">
                       <span style="color:white">Wheelhouse Buddy</span>
                       <button style="text-align: left; margin-top: 0px; text-decoration: underline; background-color:rgba(0,0,0,0); padding:0px; padding-right:30px; font-size: 12px; color:white; border: none; box-shadow: none;" onclick="window.open('https://clevvur.com', '_blank')">Powered ⚡️by Clevvur.com</button>
                 </div>
