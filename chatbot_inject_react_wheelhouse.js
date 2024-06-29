@@ -281,7 +281,7 @@
                 document.getElementById('chatbot-container').style.display = 'flex';
                 document.getElementById('hide-chatbot-btn').style.display = 'flex';
                 document.getElementById('show-chatbot-btn').style.display = 'none';
-            }, 5000);
+            }, 10000);
 
          
          
