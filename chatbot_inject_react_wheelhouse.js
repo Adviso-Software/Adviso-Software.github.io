@@ -284,8 +284,8 @@
 
 
 
-var elements = document.getElementsByClassName('classNameOfTheDiv');
-
+var elements = document.getElementsByClassName('1bk5mm5 ');
+console.log(elements)
 function contentChanged() {
     // This function will run each time the content of any of the divs changes
     console.log('Content changed');
