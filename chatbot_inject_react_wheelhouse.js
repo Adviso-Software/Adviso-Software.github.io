@@ -271,7 +271,7 @@
                 </div>
 
             </div>
-              <iframe src="https://wheelhouse-chat-fc453a4cc8a7.herokuapp.com/" allowtransparency="true"></iframe>
+              <iframe id="chatbot-iframe" src="https://wheelhouse-chat-fc453a4cc8a7.herokuapp.com/" allowtransparency="true"></iframe>
             `;
             document.body.appendChild(chatbotContainer);
           
@@ -284,6 +284,11 @@
 
 
 
+
+         var iframe = document.getElementById('chatbot-iframe');
+            var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+            var elements = iframeDocument.getElementsByClassName('1bk5mm5');
+         console.log(elements)
 var targetNode = document.getElementById('chatbot-container'); 
  console.log(targetNode)
 // Create an observer instance 
@@ -298,6 +303,8 @@ var config = { attributes: true, childList: true, characterData: true };
  
 // Pass in the target node, as well as the observer options 
 observer.observe(targetNode, config); 
+
+         
          
             // Add event listeners
             document.getElementById('show-chatbot-btn').addEventListener('click', function() {
