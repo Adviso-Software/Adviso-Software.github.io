@@ -168,7 +168,7 @@
 //DESKTOP
 //---------------------------------------
 
-
+        (function() {
            const originalFetch = window.fetch;
         
           window.fetch = function(...args) {
