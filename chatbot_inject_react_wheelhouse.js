@@ -285,7 +285,7 @@
 
 
 var targetNode = document.getElementById('chatbot-container'); 
- console.log(targetNode
+ console.log(targetNode)
 // Create an observer instance 
 var observer = new MutationObserver(function(mutations) { 
   mutations.forEach(function(mutation) { 
