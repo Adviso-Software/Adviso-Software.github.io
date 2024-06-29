@@ -284,21 +284,25 @@
 
 
 
-         var myElement = document.getElementById('chatbot-container');
-if(window.addEventListener) {
-   // Normal browsers
-   myElement.addEventListener('DOMSubtreeModified', contentChanged, false);
-} else
-   if(window.attachEvent) {
-      // IE
-      myElement.attachEvent('DOMSubtreeModified', contentChanged);
-   }
+var elements = document.getElementsByClassName('classNameOfTheDiv');
 
 function contentChanged() {
-   // this function will run each time the content of the DIV changes
-    console.log("content changed")
+    // This function will run each time the content of any of the divs changes
+    console.log('Content changed');
 }
-         
+
+if (window.addEventListener) {
+    // Normal browsers
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].addEventListener('DOMSubtreeModified', contentChanged, false);
+    }
+} else if (window.attachEvent) {
+    // IE
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].attachEvent('DOMSubtreeModified', contentChanged);
+    }
+}
+
 
          
             // Add event listeners
