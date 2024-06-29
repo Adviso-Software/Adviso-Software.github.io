@@ -145,7 +145,13 @@
             `;
             document.body.appendChild(chatbotContainer);
           
-
+            // Show chatbot container after x seconds
+            setTimeout(function() {
+                document.getElementById('chatbot-container').style.display = 'flex';
+                document.getElementById('hide-chatbot-btn').style.display = 'flex';
+                document.getElementById('show-chatbot-btn').style.display = 'none';
+            }, 8000);
+         
           
             // Add event listeners
             document.getElementById('show-chatbot-btn').addEventListener('click', function() {
