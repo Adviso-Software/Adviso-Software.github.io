@@ -168,25 +168,27 @@
 //DESKTOP
 //---------------------------------------
 
-        (function() {
-           const originalFetch = window.fetch;
+        // Save a reference to the original fetch function
+        const originalFetch = window.fetch;
         
-          window.fetch = function(...args) {
-            return originalFetch.apply(this, args)
-              .then(response => {
-                response.clone().json().then(data => {
-                  const event = new CustomEvent('responseReceived', { detail: data });
-                  document.dispatchEvent(event);
-                });
-                return response;
-              });
-          };
-        })();
-        
-        document.addEventListener('responseReceived', event => {
-          console.log('Response received:', event.detail);
-          // Handle the response here
-        });
+        // Override the fetch function
+        window.fetch = async function(...args) {
+            const response = await originalFetch(...args);
+            
+            // Clone the response so you can read it without affecting the original response
+            const clonedResponse = response.clone();
+            
+            // Log the response (this assumes the response is JSON)
+            clonedResponse.json().then(data => {
+                console.log('Intercepted fetch response:', data);
+            }).catch(error => {
+                console.error('Failed to parse JSON response:', error);
+            });
+            
+            // Return the original response so the original fetch call works as expected
+            return response;
+        };
+
 
 
 
