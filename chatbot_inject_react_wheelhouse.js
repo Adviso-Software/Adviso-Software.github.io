@@ -280,34 +280,8 @@
             setTimeout(function() {
                 document.getElementById('chatbot-container').style.display = 'flex';
                 document.getElementById('hide-chatbot-btn').style.display = 'flex';
-            }, 999999);
-
-
-
-
-         var iframe = document.getElementById('chatbot-iframe');
-         console.log(iframe)
-         iframe.onload = function() {
-             console.log("loaded")
-              var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-            var elements = iframeDocument.getElementsByClassName('1bk5mm5');
-         console.log(elements)
-         }
-           
-var targetNode = document.getElementById('chatbot-container'); 
- console.log(targetNode)
-// Create an observer instance 
-var observer = new MutationObserver(function(mutations) { 
-  mutations.forEach(function(mutation) { 
-    console.log('The contents of the div element have changed.'); 
-  }); 
-}); 
- 
-// Configuration of the observer: 
-var config = { attributes: true, childList: true, characterData: true }; 
- 
-// Pass in the target node, as well as the observer options 
-observer.observe(targetNode, config); 
+                document.getElementById('show-chatbot-btn').style.display = 'none';
+            }, 5000);
 
          
          
