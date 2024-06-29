@@ -247,7 +247,14 @@
             const showChatbotBtn = document.createElement('button');
             showChatbotBtn.id = 'show-chatbot-btn';
             showChatbotBtn.innerHTML = `
-              <img src="https://i.imgur.com/CYf5wdV.png" alt="Icon" style="height: 128px; width: 128px; margin-right: -25px;" />
+              <div style="height: 128px; width: 128px;  margin-right: 0px;">
+                 <img src="https://i.imgur.com/CYf5wdV.png" alt="Icon" style="height: 128px; width: 128px;" />
+             </div>
+
+              <div style="height: 128px; width: 128px;  margin-right: 30px;">
+                 <img src="https://adviso-software.github.io/icon.jpg" alt="Icon" style="height: 128px; width: 128px;" />
+             </div>
+             
               <span id="bounce-text" style="bottom:130px; width: 200px; right:10px; background-color: rgba(192,40,39,1); opacity: 1; padding:10px; border-radius: 50px; border-bottom-right-radius: 0px; position: absolute;">
                 Need help? Talk to me!
               </span>
