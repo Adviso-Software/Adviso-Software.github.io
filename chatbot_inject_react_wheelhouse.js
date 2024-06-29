@@ -65,7 +65,7 @@
               #show-chatbot-btn {
                 position: fixed;
                 right: 0px;
-                bottom: 140px;
+                bottom: 100px;
                 background-color: rgba(0,0,0,0);
                 color: white;
                 border: none;
