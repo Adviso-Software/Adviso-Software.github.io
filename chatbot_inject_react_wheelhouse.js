@@ -36,7 +36,7 @@
                       }
                 }
               #bounce-text {
-                animation: bounce 1s infinite;
+                animation: bounce 2s infinite;
               }
               #chatbot-container {
                 position: fixed;
@@ -180,7 +180,7 @@
                       }
                 }
               #bounce-text {
-                animation: bounce 1s infinite;
+                animation: bounce 2s infinite;
              }
 
               #chatbot-container {
