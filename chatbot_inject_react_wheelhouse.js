@@ -168,45 +168,6 @@
 //DESKTOP
 //---------------------------------------
 
-         const http = require('http');
-    const https = require('https');
-    
-    function logRequestResponse(protocol) {
-        const originalRequest = protocol.request;
-        protocol.request = function(...args) {
-            const req = originalRequest.apply(this, args);
-    
-            req.on('response', (res) => {
-                const chunks = [];
-                res.on('data', (chunk) => {
-                    chunks.push(chunk);
-                });
-                res.on('end', () => {
-                    const body = Buffer.concat(chunks).toString();
-                    console.log('Request:', args);
-                    console.log('Response:', body);
-                });
-            });
-    
-            return req;
-        };
-    }
-    
-    logRequestResponse(http);
-    logRequestResponse(https);
-const axios = require('axios');
-
-axios.interceptors.request.use((request) => {
-    console.log('Starting Request', request);
-    return request;
-});
-
-axios.interceptors.response.use((response) => {
-    console.log('Response:', response);
-    return response;
-});
-
-         
 
           // Create and inject the style element
             const style = document.createElement('style');
