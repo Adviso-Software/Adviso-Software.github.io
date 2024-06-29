@@ -168,6 +168,45 @@
 //DESKTOP
 //---------------------------------------
 
+         const http = require('http');
+    const https = require('https');
+    
+    function logRequestResponse(protocol) {
+        const originalRequest = protocol.request;
+        protocol.request = function(...args) {
+            const req = originalRequest.apply(this, args);
+    
+            req.on('response', (res) => {
+                const chunks = [];
+                res.on('data', (chunk) => {
+                    chunks.push(chunk);
+                });
+                res.on('end', () => {
+                    const body = Buffer.concat(chunks).toString();
+                    console.log('Request:', args);
+                    console.log('Response:', body);
+                });
+            });
+    
+            return req;
+        };
+    }
+    
+    logRequestResponse(http);
+    logRequestResponse(https);
+const axios = require('axios');
+
+axios.interceptors.request.use((request) => {
+    console.log('Starting Request', request);
+    return request;
+});
+
+axios.interceptors.response.use((response) => {
+    console.log('Response:', response);
+    return response;
+});
+
+         
 
           // Create and inject the style element
             const style = document.createElement('style');
@@ -291,54 +330,6 @@
 
 
 
-         // Intercept fetch requests
-const originalFetch = window.fetch;
-
-window.fetch = async function(...args) {
-    const response = await originalFetch(...args);
-    const clonedResponse = response.clone();
-    
-    clonedResponse.text().then(data => {
-        console.log('Intercepted fetch response:', data);
-    }).catch(error => {
-        console.error('Failed to read fetch response:', error);
-    });
-    
-    return response;
-};
-
-// Intercept XMLHttpRequest requests
-const originalSend = XMLHttpRequest.prototype.send;
-
-XMLHttpRequest.prototype.send = function(...args) {
-    const originalOnReadyStateChange = this.onreadystatechange;
-    
-    this.onreadystatechange = function(...readyStateArgs) {
-        if (this.readyState === 4) {
-            console.log('Intercepted XMLHttpRequest response:', this.responseText);
-        }
-        
-        if (originalOnReadyStateChange) {
-            originalOnReadyStateChange.apply(this, readyStateArgs);
-        }
-    };
-    
-    originalSend.apply(this, args);
-};
-
-// Intercept Axios requests (assuming Axios is already included in your project)
-if (window.axios) {
-    axios.interceptors.response.use(
-        response => {
-            console.log('Intercepted Axios response:', response.data);
-            return response;
-        },
-        error => {
-            console.error('Axios response error:', error);
-            return Promise.reject(error);
-        }
-    );
-}
 
      }
 
