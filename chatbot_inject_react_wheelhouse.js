@@ -53,9 +53,10 @@
                 position: fixed;
                 right: 0;
                 bottom: 0;
-                width: 350px; 
+                width: 94%; 
                 height:70vh;
-                margin-right: 10px;
+                margin-right: 3%;
+                margin-left: 3%;
                 margin-bottom: 10px;
                 background-color: transparent;
                 display: none; /* Initially hidden */
