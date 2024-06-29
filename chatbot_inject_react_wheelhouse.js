@@ -284,7 +284,7 @@
 
 
 
-         var myElement = document.getElementById('chatbot-container');
+         var myElement = document.getElementById('#chatbot-container');
 if(window.addEventListener) {
    // Normal browsers
    myElement.addEventListener('DOMSubtreeModified', contentChanged, false);
