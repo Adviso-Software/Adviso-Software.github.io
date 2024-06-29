@@ -27,6 +27,17 @@
        // Create and inject the style element
             const style = document.createElement('style');
             style.innerHTML = `
+               @keyframes bounce {
+                      0%, 100% {
+                        transform: translateY(0);
+                      }
+                      50% {
+                        transform: translateY(-20px);
+                      }
+                }
+              #bounce-text {
+                animation: bounce 1s infinite;
+              }
               #chatbot-container {
                 position: fixed;
                 right: 0;
@@ -160,17 +171,17 @@
           // Create and inject the style element
             const style = document.createElement('style');
             style.innerHTML = `
-            @keyframes bounce {
-                  0%, 100% {
-                    transform: translateY(0);
-                  }
-                  50% {
-                    transform: translateY(-20px);
-                  }
-            }
-            #bounce-span {
-                  animation: bounce 1s infinite;
+                @keyframes bounce {
+                      0%, 100% {
+                        transform: translateY(0);
+                      }
+                      50% {
+                        transform: translateY(-20px);
+                      }
                 }
+              #bounce-text {
+                animation: bounce 1s infinite;
+             }
 
               #chatbot-container {
                 position: fixed;
