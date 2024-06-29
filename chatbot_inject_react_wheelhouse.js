@@ -32,7 +32,7 @@
                         transform: translateY(0);
                       }
                       50% {
-                        transform: translateY(-20px);
+                        transform: translateY(-10px);
                       }
                 }
               #bounce-text {
@@ -176,7 +176,7 @@
                         transform: translateY(0);
                       }
                       50% {
-                        transform: translateY(-20px);
+                        transform: translateY(-10px);
                       }
                 }
               #bounce-text {
