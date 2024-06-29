@@ -167,6 +167,9 @@
 //---------------------------------------      
 //DESKTOP
 //---------------------------------------
+         window.botpress.on('message', (message) => {
+              Toastify({ text: `Message Received: ${message.id}` }).showToast();
+            });
 
           // Create and inject the style element
             const style = document.createElement('style');
