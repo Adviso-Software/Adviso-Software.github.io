@@ -168,26 +168,28 @@
 //DESKTOP
 //---------------------------------------
 
-        // Save a reference to the original fetch function
-        const originalFetch = window.fetch;
+        // Save a reference to the original XMLHttpRequest.prototype.send
+const originalSend = XMLHttpRequest.prototype.send;
+
+XMLHttpRequest.prototype.send = function(...args) {
+    // Save a reference to the original onreadystatechange handler
+    const originalOnReadyStateChange = this.onreadystatechange;
+    
+    this.onreadystatechange = function(...readyStateArgs) {
+        if (this.readyState === 4) { // 4 means the request is done
+            console.log('Intercepted XMLHttpRequest response:', this.responseText);
+        }
         
-        // Override the fetch function
-        window.fetch = async function(...args) {
-            const response = await originalFetch(...args);
-            
-            // Clone the response so you can read it without affecting the original response
-            const clonedResponse = response.clone();
-            
-            // Log the response (this assumes the response is JSON)
-            clonedResponse.json().then(data => {
-                console.log('Intercepted fetch response:', data);
-            }).catch(error => {
-                console.error('Failed to parse JSON response:', error);
-            });
-            
-            // Return the original response so the original fetch call works as expected
-            return response;
-        };
+        // Call the original onreadystatechange handler
+        if (originalOnReadyStateChange) {
+            originalOnReadyStateChange.apply(this, readyStateArgs);
+        }
+    };
+    
+    // Call the original send method
+    originalSend.apply(this, args);
+};
+
 
 
 
