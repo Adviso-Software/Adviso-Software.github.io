@@ -61,7 +61,7 @@
                 background-color: transparent;
                 display: none; /* Initially hidden */
                 border-radius: 0.5rem;
-                z-index:999;
+                z-index:99999 !important;
                 box-shadow: 
                     0px 4px 6px rgba(0, 0, 0, 0.1), /* Bottom shadow */
                     -4px 0px 6px rgba(0, 0, 0, 0.1), /* Left shadow */
@@ -83,7 +83,7 @@
                 border: none;
                 cursor: pointer;
                 display: flex; 
-                z-index:999;
+                z-index:99999;
               }
               #hide-chatbot-btn {
                 position: absolute;
@@ -222,7 +222,7 @@
                 margin-right: 10px;
                 margin-bottom: 10px;
                 background-color: transparent;
-                z-index:99999;
+                z-index:99999 !important;
                 display: none;
                 border-radius: 0.5rem;
                 box-shadow: 
