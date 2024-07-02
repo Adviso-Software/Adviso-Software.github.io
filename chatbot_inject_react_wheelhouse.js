@@ -307,6 +307,11 @@
 
          
             // Add event listeners
+             document.getElementById('bounce-text').addEventListener('click', function() {
+              document.getElementById('chatbot-container').style.display = 'block';
+              document.getElementById('hide-chatbot-btn').style.display = 'block';
+              this.style.display = 'none'; // Hide the button after showing the chatbot
+            });
             document.getElementById('show-chatbot-btn').addEventListener('click', function() {
               document.getElementById('chatbot-container').style.display = 'block';
               document.getElementById('hide-chatbot-btn').style.display = 'block';
