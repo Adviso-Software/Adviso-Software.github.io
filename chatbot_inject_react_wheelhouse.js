@@ -37,7 +37,6 @@
                 }
               #bounce-text {
                 animation: bounce 1.5s infinite;
-                animation-iteration-count: 5;
                 bottom: 65px;
                 width: 150px;
                 right: 10px;
@@ -62,7 +61,7 @@
                 background-color: transparent;
                 display: none; /* Initially hidden */
                 border-radius: 0.5rem;
-                z-index:99999 !important;
+                z-index:999;
                 box-shadow: 
                     0px 4px 6px rgba(0, 0, 0, 0.1), /* Bottom shadow */
                     -4px 0px 6px rgba(0, 0, 0, 0.1), /* Left shadow */
@@ -84,7 +83,7 @@
                 border: none;
                 cursor: pointer;
                 display: flex; 
-                z-index:99999;
+                z-index:999;
               }
               #hide-chatbot-btn {
                 position: absolute;
@@ -146,6 +145,12 @@
             `;
             document.body.appendChild(chatbotContainer);
           
+            // Show chatbot container after x seconds
+            setTimeout(function() {
+                document.getElementById('chatbot-container').style.display = 'flex';
+                document.getElementById('hide-chatbot-btn').style.display = 'flex';
+                document.getElementById('show-chatbot-btn').style.display = 'none';
+            }, 6500);
          
           
             // Add event listeners
@@ -198,7 +203,6 @@
                 bottom: 130px;
                 width: 200px;
                 right: 10px;
-                animation-iteration-count: 5;
                 background-color: rgba(192,40,39,1);
                 opacity: 1;
                 padding: 10px;
@@ -218,7 +222,7 @@
                 margin-right: 10px;
                 margin-bottom: 10px;
                 background-color: transparent;
-                z-index:99999 !important;
+                z-index:99999;
                 display: none;
                 border-radius: 0.5rem;
                 box-shadow: 
@@ -304,22 +308,23 @@
             document.body.appendChild(chatbotContainer);
           
 
-                     // Show chatbot container after x seconds
+           // Show chatbot container after x seconds
             setTimeout(function() {
                 document.getElementById('chatbot-container').style.display = 'flex';
                 document.getElementById('hide-chatbot-btn').style.display = 'flex';
                 document.getElementById('show-chatbot-btn').style.display = 'none';
             }, 6500);
+
+         
          
             // Add event listeners
             document.getElementById('show-chatbot-btn').addEventListener('click', function() {
-                console.log("test")
-              document.getElementById('chatbot-container').style.display = 'flex';
-              document.getElementById('hide-chatbot-btn').style.display = 'flex';
+              document.getElementById('chatbot-container').style.display = 'block';
+              document.getElementById('hide-chatbot-btn').style.display = 'block';
               this.style.display = 'none'; // Hide the button after showing the chatbot
             });
             document.getElementById('hide-chatbot-btn').addEventListener('click', function() {
-              document.getElementById('show-chatbot-btn').style.display = 'flex';
+              document.getElementById('show-chatbot-btn').style.display = 'block';
               document.getElementById('chatbot-container').style.display = 'none';
               this.style.display = 'none'; 
             });
