@@ -37,6 +37,7 @@
                 }
               #bounce-text {
                 animation: bounce 1.5s infinite;
+                animation-iteration-count: 5;
                 bottom: 65px;
                 width: 150px;
                 right: 10px;
@@ -197,6 +198,7 @@
                 bottom: 130px;
                 width: 200px;
                 right: 10px;
+                animation-iteration-count: 5;
                 background-color: rgba(192,40,39,1);
                 opacity: 1;
                 padding: 10px;
