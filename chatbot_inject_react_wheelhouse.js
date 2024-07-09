@@ -46,7 +46,7 @@
                 border-radius: 50px;
                 border-bottom-right-radius: 0px;
                 position: absolute;
-                font-size: 16px !important;
+                font-size: 17px !important;
                 border: 1px solid black;
                 animation-iteration-count: 5;
                 font-family: Anybody !important;
@@ -207,7 +207,7 @@
                 border-radius: 50px;
                 border-bottom-right-radius: 0px;
                 position: absolute;
-                font-size: 16px !important;
+                font-size: 17px !important;
                 border: 1px solid black;
                 animation-iteration-count: 5;
                 font-family: Anybody !important;
