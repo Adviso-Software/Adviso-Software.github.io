@@ -46,7 +46,7 @@
                 border-radius: 50px;
                 border-bottom-right-radius: 0px;
                 position: absolute;
-                font-size: calc(100% + 2px);
+                font-size: 16px !important;
                 border: 1px solid black;
                 animation-iteration-count: 5;
               }
@@ -204,7 +204,7 @@
                 border-radius: 50px;
                 border-bottom-right-radius: 0px;
                 position: absolute;
-                font-size: calc(100% + 2px);
+                font-size: 16px !important;
                 border: 1px solid black;
                 animation-iteration-count: 5;
              }
