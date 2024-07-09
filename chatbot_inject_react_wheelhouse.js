@@ -49,6 +49,8 @@
                 font-size: 16px !important;
                 border: 1px solid black;
                 animation-iteration-count: 5;
+                font-family: Anybody !important;
+                font-weight: normal !important;
               }
               #chatbot-container {
                 position: fixed;
@@ -85,6 +87,7 @@
                 cursor: pointer;
                 display: flex; 
                 z-index:999;
+                padding: 0px;
               }
               #hide-chatbot-btn {
                 position: absolute;
@@ -115,8 +118,8 @@
             const showChatbotBtn = document.createElement('button');
             showChatbotBtn.id = 'show-chatbot-btn';
             showChatbotBtn.innerHTML = `
-             <div style="height: 60px; width: 60px;  margin-right: -8px;">
-                 <img src="https://i.imgur.com/CYf5wdV.png" alt="Icon" style="height: 60px; width: 60px;" />
+             <div style="height: 60px; width: 60px;  display:contents">
+                 <img src="https://Adviso-Software.github.io/cut_clevvur_icon.png" alt="Icon" style="height: 60px; width: auto;" />
              </div>
               
               <span id="bounce-text">
@@ -207,6 +210,8 @@
                 font-size: 16px !important;
                 border: 1px solid black;
                 animation-iteration-count: 5;
+                font-family: Anybody !important;
+                font-weight: normal !important;
              }
 
               #chatbot-container {
