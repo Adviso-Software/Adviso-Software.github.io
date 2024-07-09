@@ -273,7 +273,7 @@
             const showChatbotBtn = document.createElement('button');
             showChatbotBtn.id = 'show-chatbot-btn';
             showChatbotBtn.innerHTML = `
-              <div style="height: 128px; width: 128px; ">
+              <div style="height: 128px; width: 128px; display:contents">
                  <img src="https://Adviso-Software.github.io/cut_clevvur_icon.png" alt="Icon" style="height: 128px; width: 0px;  margin-right: -50px;" />
              </div>
              
