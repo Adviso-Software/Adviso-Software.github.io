@@ -39,7 +39,7 @@
                 animation: bounce 1.5s infinite;
                 bottom: 65px;
                 width: 150px;
-                right: 10px;
+                right: 0px;
                 background-color: rgba(192,40,39,1);
                 opacity: 1;
                 padding: 7px;
@@ -197,7 +197,7 @@
                 animation: bounce 1.5s infinite;
                 bottom: 130px;
                 width: 200px;
-                right: 10px;
+                right: 0px;
                 background-color: rgba(192,40,39,1);
                 opacity: 1;
                 padding: 10px;
