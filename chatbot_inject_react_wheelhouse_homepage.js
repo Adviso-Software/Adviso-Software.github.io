@@ -123,7 +123,7 @@
              </div>
               
               <span id="bounce-text">
-                Talk to our AI Budtender!
+                Need help? Talk to me!
               </span>
             `;
             document.body.appendChild(showChatbotBtn);
@@ -283,7 +283,7 @@
              </div>
              
               <span id="bounce-text"">
-                Talk to our AI Budtender!
+                Need help? Talk to me!
               </span>
             `;
             document.body.appendChild(showChatbotBtn);
