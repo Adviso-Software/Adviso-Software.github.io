@@ -119,7 +119,7 @@
             showChatbotBtn.id = 'show-chatbot-btn';
             showChatbotBtn.innerHTML = `
              <div style="height: 60px; width: 60px;  display:contents">
-                 <img src="https://Adviso-Software.github.io/cut_clevvur_icon.png" alt="Icon" style="height: 60px; width: auto;" />
+                 <img src="https://Adviso-Software.github.io/cut_clevvur_icon.png" alt="Click here to talk to our AI Chatbot for help" style="height: 60px; width: auto;" />
              </div>
               
               <span id="bounce-text">
@@ -279,7 +279,7 @@
             showChatbotBtn.id = 'show-chatbot-btn';
             showChatbotBtn.innerHTML = `
               <div style="height: 128px; width: 128px; display:contents">
-                 <img src="https://Adviso-Software.github.io/cut_clevvur_icon.png" alt="Icon" style="height: 128px; width: auto;" />
+                 <img src="https://Adviso-Software.github.io/cut_clevvur_icon.png" alt="Click here to talk to our AI Chatbot for help" style="height: 128px; width: auto;" />
              </div>
              
               <span id="bounce-text"">
