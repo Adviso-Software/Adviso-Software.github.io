@@ -80,7 +80,7 @@
               #show-chatbot-btn {
                 position: fixed;
                 right: 0px;
-                bottom: 90px;
+                bottom: 30px;
                 background-color: rgba(0,0,0,0);
                 color: white;
                 border: none;
@@ -145,7 +145,7 @@
                 </div>
 
             </div>
-              <iframe src="https://wheelhouse-chat-fc453a4cc8a7.herokuapp.com/" allowtransparency="true"></iframe>
+              <iframe src="https://clevvurbuddy-f4a524c9832d.herokuapp.com/" allowtransparency="true"></iframe>
             `;
             document.body.appendChild(chatbotContainer);
           
@@ -241,7 +241,7 @@
               #show-chatbot-btn {
                 position: fixed;
                 right: 0px;
-                bottom: 0px;
+                bottom: 30px;
                 background-color: rgba(0,0,0,0);
                 color: white;
                 border: none;
@@ -305,7 +305,7 @@
                 </div>
 
             </div>
-              <iframe id="chatbot-iframe" src="https://wheelhouse-chat-fc453a4cc8a7.herokuapp.com/" allowtransparency="true"></iframe>
+              <iframe id="chatbot-iframe" src="https://clevvurbuddy-f4a524c9832d.herokuapp.com/" allowtransparency="true"></iframe>
             `;
             document.body.appendChild(chatbotContainer);
           
