@@ -145,7 +145,7 @@
                 </div>
 
             </div>
-              <iframe src="https://clevvurlist-f99e581544bd.herokuapp.com/" allowtransparency="true"></iframe>
+              <iframe src="https://clevvurbuddy-9f6d32a744df.herokuapp.com/" allowtransparency="true"></iframe>
             `;
             document.body.appendChild(chatbotContainer);
           
@@ -305,7 +305,7 @@
                 </div>
 
             </div>
-              <iframe id="chatbot-iframe" src="https://clevvurlist-f99e581544bd.herokuapp.com/" allowtransparency="true"></iframe>
+              <iframe id="chatbot-iframe" src="https://clevvurbuddy-9f6d32a744df.herokuapp.com/" allowtransparency="true"></iframe>
             `;
             document.body.appendChild(chatbotContainer);
           
