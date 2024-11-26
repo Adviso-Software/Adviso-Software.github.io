@@ -145,7 +145,7 @@
                 </div>
 
             </div>
-              <iframe src="https://wheelhouse-chat-fc453a4cc8a7.herokuapp.com/" allowtransparency="true"></iframe>
+              <iframe src="https://clevvurbuddy-f4a524c9832d.herokuapp.com/" allowtransparency="true"></iframe>
             `;
             document.body.appendChild(chatbotContainer);
           
@@ -305,7 +305,7 @@
                 </div>
 
             </div>
-              <iframe id="chatbot-iframe" src="https://wheelhouse-chat-fc453a4cc8a7.herokuapp.com/" allowtransparency="true"></iframe>
+              <iframe id="chatbot-iframe" src="https://clevvurbuddy-f4a524c9832d.herokuapp.com/" allowtransparency="true"></iframe>
             `;
             document.body.appendChild(chatbotContainer);
           
